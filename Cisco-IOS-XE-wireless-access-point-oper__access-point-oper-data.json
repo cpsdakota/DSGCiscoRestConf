@@ -1,0 +1,5 @@
+
+Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data
+--------------------------------------------------------------
+@{ap-radio-neighbor=System.Object[]; radio-oper-data=System.Object[]; capwap-data=System.Object[]; ap-name-mac-map=Syst…
+
