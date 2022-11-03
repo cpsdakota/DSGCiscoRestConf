@@ -4,7 +4,7 @@ $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Accept", "application/yang-data+json")
 $headers.Add("Authorization", "Basic $($env:DC1WLC9800_TOKEN)")
 
-Remove-Variable macs
+Remove-Variable macs -ea 0
 $macs = $controllers | Foreach-Object -ThrottleLimit 3 -Parallel {
     #Action that will run in Parallel. Reference the current object via $PSItem and bring in outside variables with $USING:varname
     $uri = "https://$($_)/restconf/data/Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data/ap-name-mac-map"
