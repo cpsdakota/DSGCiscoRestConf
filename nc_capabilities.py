@@ -1,7 +1,9 @@
 from ncclient import manager
+import os
 
 
-m = manager.connect(host='dc1nwlc9800', port=830, username='srv-napalm', password='T4iygkCDWULHHJqi', device_params={'name': 'iosxe'})
+m = manager.connect(host='dc1nwlc9800', port=830, username='srv-napalm', \
+    password=os.getenv("NAPALM_PW"), device_params={'name': 'iosxe'})
 
 # for item in m.client_capabilities:
 #     print(item)
@@ -12,6 +14,6 @@ m = manager.connect(host='dc1nwlc9800', port=830, username='srv-napalm', passwor
 SCHEMA = m.get_schema('Cisco-IOS-XE-wireless-ap-cfg')
 print(SCHEMA)
 
-config = m.get_config("running")
+# config = m.get_config("running")
 m.close_session()
-print(config)
+# print(config)

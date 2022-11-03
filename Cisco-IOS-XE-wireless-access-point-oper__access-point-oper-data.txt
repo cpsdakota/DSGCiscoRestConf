@@ -1,0 +1,13 @@
+ap-iox-oper-data
+ap-name-mac-map
+ap-radio-neighbor
+capwap-data
+cdp-cache-data
+ethernet-if-stats
+ethernet-mac-wtp-mac-map
+ewlc-wncd-stats
+oper-data
+qos-global-stats
+qos-radio-data
+radio-oper-data
+radio-oper-stats

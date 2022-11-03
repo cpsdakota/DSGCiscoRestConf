@@ -1,0 +1,39 @@
+$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+$headers.Add("Accept", "application/yang-data+json")
+$headers.Add("Authorization", "Basic c3J2LWRuYWM6SmFyJDh+JituXkh2dTR6TA==")
+$response = Invoke-RestMethod 'https://10.221.52.40/restconf/data/Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data/ap-name-mac-map' -Method 'GET' -Headers $headers -SkipCertificateCheck
+$response
+$response.Cisco-IOS-XE-wireless-access-point-oper:ap-name-mac-map
+$response | gm
+$response | gm
+$response.Cisco-IOS-XE-wireless-access-point-oper:ap-name-mac-map
+$response."Cisco-IOS-XE-wireless-access-point-oper:ap-name-mac-map"
+$response."Cisco-IOS-XE-wireless-access-point-oper:ap-name-mac-map" | gm
+$response."Cisco-IOS-XE-wireless-access-point-oper:ap-name-mac-map" | select -first 5
+$response = Invoke-RestMethod 'https://10.221.52.40/restconf/data/Cisco-IOS-XE-wireless-access-point-oper' -Method 'GET' -Headers $headers -SkipCertificateCheck
+$response = Invoke-RestMethod 'https://10.221.52.40/restconf/data/' -Method 'GET' -Headers $headers -SkipCertificateCheck
+$response
+$response | gm
+$response
+$response | out-file testResponse.json
+code testResponse.json
+$response = Invoke-RestMethod 'https://10.221.52.40/restconf/data/Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data/' -Method 'GET' -Headers $headers -SkipCertificateCheck
+$responst
+$response
+$response | out-file Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data.json
+$response | out-file "Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data.json"
+$response | out-file "Cisco-IOS-XE-wireless-access-point-oper__access-point-oper-data.json"
+$response
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data" | gm
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"."ap-name-mac-map"
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"."ap-name-mac-map" | select -first 5
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data" | gm
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"."ethernet-if-stats"
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data" | gm
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"."ethernet-mac-wtp-mac-map"
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"."ethernet-mac-wtp-mac-map" | select -first 5
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"."ap-name-mac-map" | select -first 5
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data"."ap-name-mac-map" | Where-Object wtp-name -like "0006AP*"
+$response."Cisco-IOS-XE-wireless-access-point-oper:access-point-oper-data" | gm
