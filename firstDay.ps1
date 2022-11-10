@@ -3,7 +3,7 @@ $controllers = @("DC1WLC9800-1","DC1WLC9800-2","DC1WLC9800-3")
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Accept", "application/yang-data+json")
 $headers.Add("Authorization", "Basic $($env:DC1WLC9800_TOKEN)")
-# $headers.Add("Authorization", "Basic YWRtaW4tY3NjaGFmZjpIaWdoISEh")
+# $headers.Add("Authorization", "Basic YWRtaW4tY3NjaGFmZjpIaWdoISEh")S
 
 #
 # $capabilies = Invoke-RestMethod `
